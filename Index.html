@@ -1,0 +1,1308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty of Beaches</title>
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- cards start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <!-- cards end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src="https://kit.fontawesome.com/d9d63ca6bf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-H1b4f1kUddM3+5HXtZv8Y7lTo7L7E5EuvrQc87BtdZ8Dw4soB0HPvB3GcGfLf6tsRucHt+M/XlmQ8g66e5sJAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- gallery -->
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg bg-*">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Index.html"><img class="logo" src="MiscellaneousImages/logo2.png" alt="logo"
+                    width="150px" height="100px"></a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-curr ent="page" href="Index.html"><b><span style="color: #ffa500;">Home</span></b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html"><b>About Us</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#beachnav"><b>Explore Beaches</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#gallery"><b>Gallery</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><b>Contact Us</b></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            AOS.init();
+        </script>
+        <!-- visitor counter start in navbar -->
+        <div class="d-flex flex-row justify-content-around" style="width: 200px; margin-right: 50px;">
+            <div class="website-counter d-flex flex-column align-items-center justify-content-center"></div>
+            <button id="reset">Reset</button>
+        </div>
+        <script>
+            var counterContainer = document.querySelector(".website-counter");
+            var resetButton = document.querySelector("#reset");
+            var visitCount = localStorage.getItem("page_view");
+            if (visitCount) {
+                visitCount = Number(visitCount) + 1;
+                localStorage.setItem("page_view", visitCount);
+            }
+            else {
+                visitCount = 1;
+                localStorage.setItem("page_view", 1);
+            }
+            counterContainer.innerHTML = visitCount;
+            resetButton.addEventListener("click", () => {
+                visitCount = 1;
+                localStorage.setItem("page_view", 1);
+                counterContainer.innerHTML = visitCount;
+            });
+        </script>
+        <!-- visitor counter end -->
+    </nav>
+    <!-- navbar end -->
+    <!-- carousel start -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <video id="vid" class="video-fluid" autoplay loop muted>
+                    <source src="Videos/vid4.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-item">
+                <video id="vid" class="video-fluid" autoplay loop muted>
+                    <source src="Videos/vid1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-item">
+                <video id="vid" class="video-fluid" autoplay loop muted>
+                    <source src="Videos/vid5.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div id="para" class="carousel-caption font-weight-bold text-warning">
+                <h1 id="para1">BEAUTY OF BEACHES</h1>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- carousel end -->
+
+    <!-- section counter start -->
+    <div style="height: 100px;"></div>
+    <div id="sectionbg" data-aos="fade-up">
+        <h3 id="counterhead">COUNTER OF <span
+                style="color: rgb(0, 204, 255); font-style: italic; text-decoration: underline;">BEAUTY OF
+                BEACHES</span></h3>
+
+        <br>
+        <div class="d-flex flex-row justify-content-evenly bg-info align-items-center" id="counterbg">
+            <div class="column">
+                <div class="card1 opacity-75" id="boxsize">
+                    <h3><span id="Tours">0</span>+</h3>
+                    <h3>Tours</h3>
+                </div>
+            </div>
+            <div class="column ">
+                <div class="card1 opacity-75" id="boxsize">
+                    <h3><span id="Countires">0</span>+</h3>
+                    <h3>Countires</h3>
+                </div>
+            </div>
+            <div class="column">
+                <div class="card1 opacity-75" id="boxsize">
+                    <h3><span id="Clients">0</span>+</h3>
+                    <h3>Happy Clients</h3>
+                </div>
+            </div>
+        </div>
+    </div><br><br>
+    <script>
+        function numCounter(tagId, maxCount, speed) {
+            var initialNumber = 0;
+            function counter() {
+                document.getElementById(tagId).innerHTML = initialNumber;
+                ++initialNumber;
+            }
+            var counterDelay = setInterval(counter, speed);
+            function totalTime() {
+                clearInterval(counterDelay);
+            }
+            var totalPeriod = speed * (maxCount);
+            setTimeout(totalTime, totalPeriod);
+        }
+
+        numCounter("Countires", 33, 100);
+        numCounter("Clients", 350, 10);
+        numCounter("Tours", 436, 10);
+    </script>
+    <!-- section counter end -->
+
+
+    <!-- Card and tabs start -->
+    <div style="margin-top: 100px;" class="d-flex flex-column " data-aos="fade-up" id="beachnav">
+        <div class="d-flex flex-row justify-content-evenly mt-3">
+            <h3 id="zoneheading">Explore the <span
+                    style="color: rgb(0, 204, 255); font-style: italic; text-decoration: underline;">Beauty of
+                    Beaches</span> by Geographical Zones</h3>
+        </div><br>
+
+
+        <script>
+            $(function () {
+                $("#tabs").tabs();
+            });
+        </script>
+        <br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div id="tabs">
+                        <ul class="nav nav-tabs justify-content-center bg-secondary" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="north-tab" data-toggle="tab" href="#tab-1" role="tab"
+                                    aria-controls="north" aria-selected="true">North Zone</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="south-tab" data-toggle="tab" href="#tab-2" role="tab"
+                                    aria-controls="south" aria-selected="false">South Zone</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="east-tab" data-toggle="tab" href="#tab-3" role="tab"
+                                    aria-controls="east" aria-selected="false">East Zone</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="west-tab" data-toggle="tab" href="#tab-4" role="tab"
+                                    aria-controls="west" aria-selected="false">West Zone</a>
+                            </li>
+                        </ul>
+                        <!-- TABS CONTENT -->
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="tab-1" role="tabpanel"
+                                aria-labelledby="north-tab">
+                                <h3 class="mt-3"
+                                    style="text-align: center; font-style: italic; text-decoration: underline; font-family: 'Times New Roman', Times, serif; font-weight: bolder;">
+                                    NORTH ZONE</h3><br>
+                                <div id="northzone">
+                                    <div class="d-flex flex-row justify-content-evenly flex-wrap">
+
+                                        <div class="card mb-5">
+                                            <img src="North/bournemouth.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Bournemouth Beach
+                                                </h2>
+
+                                                <p id="cardpara">
+                                                    Bournemouth is a coastal resort town on the south coast in the
+                                                    Bournemouth,
+                                                    England
+                                                </p>
+
+                                                <a target="_blank" href="BeachesDetail/Bournemouth.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="North/chesterman 2.webp" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Chesterman Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    The longest beach probably along the Tofino coastline in the
+                                                    Canadian province of
+                                                    British
+                                                    Columbia
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/Chesterman.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="North/fistral.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Fistral Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Fistral Beach is in Fistral Bay on the north coast of Cornwall,
+                                                    England, United
+                                                    Kingdom
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/Fistral.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="North/kerama island.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Kerama Island
+                                                </h2>
+                                                <p id="cardpara">
+                                                    The Kerama Islands are a subtropical island group 32 kilometres
+                                                    southwest of Okinawa
+                                                    Island
+                                                    in Japan
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/Kerama.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="North/kitsilano.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Kitsilano Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Kitsilano Beach is one of the most popular beaches in Vancouver.
+                                                    Located at the
+                                                    north edge
+                                                    of the Kitsilano neighbourhood, the beach faces out onto English Bay
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/Kitsilano.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="North/maui.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Maui Island
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Maui is an island in the Hawaiian archipelago, United States
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/Maui.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="North/miyako.webp" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Miyako Island
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Miyako Island is the largest of the Miyako Islands and lies to the
+                                                    southwest of
+                                                    Naha,
+                                                    halfway between Taiwan and the main island of Okinawa
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/miyako.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="North/piha.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Piha Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Piha is a seaside village, west of Auckland, on New Zealand’s North
+                                                    Island
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/Piha.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="North/whitehaven.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Whitehaven Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Whitehaven Beach is on Whitsunday Island, Australia. The island is
+                                                    accessible by
+                                                    boat,
+                                                    seaplane & helicopter from Airlie Beach
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/Whiteheaven.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="North/vivonne bay.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Vivonne Bay
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Vivonne Bay is a locality in the Australian state of South Australia
+                                                    located on the
+                                                    south
+                                                    coast of Kangaroo Island
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/Vivonne Bay.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="North/siesta key.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Siesta Key Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Siesta Key is a barrier island off the southwest coast of the U.S.
+                                                    state of Florida,
+                                                    located
+                                                    between Roberts Bay and the Gulf of Mexico
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/Siesta Key.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab-2" role="tabpanel" aria-labelledby="south-tab">
+                                <h3 class="mt-3"
+                                    style="text-align: center; font-style: italic; text-decoration: underline; font-family: 'Times New Roman', Times, serif; font-weight: bolder;">
+                                    SOUTH ZONE</h3><br>
+                                <div id="southzone">
+                                    <div class=" d-flex flex-row justify-content-evenly flex-wrap">
+                                        <div class="card mb-5">
+                                            <img src="South/carneiros.avif" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Carneiros Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Carneiros is one of the most iconic beaches in Brazil, with the
+                                                    beautiful Sao
+                                                    Benedicto
+                                                    chapel
+                                                    surrounded by palm trees
+                                                </p>
+                                                <a target="_blank" href="#" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="South/gadani.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Gadani Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Gadani Beach is a beach on the Arabian Sea located near the Hub
+                                                    River and Cape Monze
+                                                    in
+                                                    Balochistan, Pakistan
+                                                </p>
+                                                <a target="_blank" href="#" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="South/ipanema.webp" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Ipanema Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Ipanema Beach is one of the most celebrated strips of sand in all of
+                                                    Brazil
+                                                </p>
+                                                <a target="_blank" href="#" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="South/kelingking.jpeg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Kelingking Beach
+                                                </h2 id="headingcolor">
+                                                <p id="cardpara">
+                                                    Kelingking Beach is one of the major tourist attractions among the
+                                                    three Nusa
+                                                    islands in
+                                                    Indonesia
+                                                </p>
+                                                <a target="_blank" href="#" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="South/kovalam.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Kovalam Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Kovalam is a beach and seaside resort in the city of
+                                                    Thiruvananthapuram in Kerala,
+                                                    India
+                                                </p>
+                                                <a target="_blank" href="#" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="South/kund malir.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Kund Malir
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Kund Malir is a beach in Balochistan, Pakistan located in Hingol
+                                                    National Park
+                                                </p>
+                                                <a target="_blank" href="#" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="South/lakshadweep.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Lakshadweep Islands
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Lakshadweep is a group of beautiful islands located off the
+                                                    southwestern coast of
+                                                    India
+                                                </p>
+                                                <a target="_blank" href="#" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="South/mubarak village.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Mubarak Village
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Mubarak Village is a fishing village in Kiamari Town in Karachi,
+                                                    Sindh, Pakistan. It
+                                                    is
+                                                    located
+                                                    along the shore of Arabian Sea in Keamari District.
+                                                </p>
+                                                <a target="_blank" href="#" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="South/pendawa.webp" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Pandawa Key Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Pandawa Beach is one of the many hidden beaches of Bali. Located on
+                                                    the island's
+                                                    southern
+                                                    Bukit
+                                                    Peninsula
+                                                </p>
+                                                <a target="_blank" href="#" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="South/pondicherry.webp" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Paondicherry Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Rock Beach is the popular stretch of beachfront in the city of
+                                                    Puducherry, India,
+                                                    along the
+                                                    Bay
+                                                    of Bengal
+                                                </p>
+                                                <a target="_blank" href="#" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="South/Sonmiani beach.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Sonmiani Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    The coast of Sonmiani is the northernmost point of the Arabian Sea.
+                                                    The Sonmiani
+                                                    Beach is
+                                                    one of
+                                                    the most popular beaches near Karachi
+                                                </p>
+                                                <a target="_blank" href="#" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="South/shek o.webp" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Shek O Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Shek O Beach is a gazetted beach located facing Island Bay in Shek
+                                                    O, Southern
+                                                    District,
+                                                    Hong
+                                                    Kong
+                                                </p>
+                                                <a target="_blank" href="#" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="tab-pane fade" id="tab-3" role="tabpanel" aria-labelledby="east-tab">
+                                <h3 class="mt-3"
+                                    style="text-align: center; font-style: italic; text-decoration: underline; font-family: 'Times New Roman', Times, serif; font-weight: bolder;">
+                                    EAST ZONE</h3><br>
+                                <div id="eastzone">
+                                    <div class=" d-flex flex-row justify-content-evenly flex-wrap">
+                                        <div class="card mb-5">
+                                            <img src="East/almaza.webp" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Almaza Bay
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, unde
+                                                    numquam aliquid
+                                                    dolores odio
+                                                    aperiam?
+                                                </p>
+                                                <a target="_blank" href="#" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="East/Bazaruto Archipelago.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Bazaruto Archipelago Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    The Bazaruto Archipelago is one of my favourite parts of Mozambique.
+                                                    It's a dreamy
+                                                    place of
+                                                    sandy islands, swaying palm trees and turquoise water.
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/Bazaruto.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="East/cabo ledo.jpeg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Cabo Ledo Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Cabo Ledo is a wide bay located in Luanda, on the Kissama National
+                                                    Park
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/Cabo ledo.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="East/el fanar.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    El Fanar Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    El Fanar Beach is located on the Red Sea (part of Indian ocean)
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/EL FANAR BEACH.pdf"
+                                                    class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="East/jumeirah.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Jumeirah Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Jumeira Beach is a white sand beach that is located and named after
+                                                    the Jumeirah
+                                                    district of
+                                                    Dubai, United Arab Emirates
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/JUMEIRAH BEACH.pdf"
+                                                    class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="East/naama bay.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Naama Bay
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Naama Bay is a natural bay in Sharm El Sheikh resort and is
+                                                    considered the main hub
+                                                    for tourists
+                                                    in the city
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/NAAMA BAY BEACH.pdf"
+                                                    class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="East/ras um sid.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Ras Um Sid
+                                                </h2>
+                                                <p id="cardpara">
+                                                    The beach at Ras um Sid is the most popular in the whole of Sharm El
+                                                    Sheikh, Egypt
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/RAS UM SID BEACH.pdf"
+                                                    class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="East/sanghaneb reef.avif" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Sanghaneb Reef
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Amazing reef. Went with red sea secret diving over a day! Should
+                                                    definately not be
+                                                    missed while
+                                                    in Port Sudan
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/Sanghaneb.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="tab-4" role="tabpanel" aria-labelledby="west-tab">
+                                <h3 class="mt-3"
+                                    style="text-align: center; font-style: italic; text-decoration: underline; font-family: 'Times New Roman', Times, serif; font-weight: bolder;">
+                                    WEST ZONE</h3><br>
+                                <div id="westzone">
+                                    <div class=" d-flex flex-row justify-content-evenly flex-wrap">
+                                        <div class="card mb-5">
+                                            <img src="West/amager strandpark.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Amager Strandpark
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Amager Strandpark (Amager Beach Park) is a seaside public park in
+                                                    Copenhagen,
+                                                    Denmark
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/amager strandpark.pdf"
+                                                    class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="West/cala biriola.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Cala Biriola Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    The beach of Cala Biriola is situated on Sardinia's eastern coast,
+                                                    part of the
+                                                    Orosei Gulf in
+                                                    Sardinia, Italy
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/Cala Biriola.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="West/camilo.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Praia do Camilo
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Praia do Camilo is an iconic beach in the Algarve region of southern
+                                                    Portugal
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/Praia do Camilo.pdf"
+                                                    class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="West/etretat.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Plage d' Étretat
+                                                </h2>
+                                                <p id="cardpara">
+                                                    The beach in France is not hugely attractive, very average but the
+                                                    cliff walks are
+                                                    well worth
+                                                    the minor effort.
+                                                </p>
+                                                <a target="_blank" href="#" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="West/guincho.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Praia do Guincho
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Praia do Guincho is an Atlantic beach located on Portugal's Estoril
+                                                    coast
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/guincho.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="West/hiddensee.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Hiddensee
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Hiddensee is a car-free island in the Baltic Sea, located west of
+                                                    Germany's largest
+                                                    island,
+                                                    Rügen, on the German coast.
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/Hiddensee.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="West/lokken.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Løkken Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Løkken beach. One of the best and widest beaches in Denmark
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/Løkken.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="card mb-5">
+                                            <img src="West/marinha.jpg" alt="">
+                                            <div class="card-content">
+                                                <h2 id="headingcolor">
+                                                    Marinha Beach
+                                                </h2>
+                                                <p id="cardpara">
+                                                    Praia da Marinha is one of the most emblematic beaches of Portugal
+                                                    with a hot-summer
+                                                    Mediterranean climate
+                                                </p>
+                                                <a target="_blank" href="BeachesDetail/Marina Beach.pdf" class="button">
+                                                    Read More
+                                                    <span class="material-symbols-outlined">
+                                                        arrow_right_alt
+                                                    </span>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+    </div>
+    <!-- Card and tabs end -->
+
+    <!-- Gallery start -->
+    <br>
+    <div id="gallery" class="container mt-3" style=" border-top: 2px solid #ffa500; border-bottom: 2px solid #ffa500;">
+        <h3
+            style="color: rgb(0, 204, 255); font-style: italic; font-family: 'Times New Roman', Times, serif; text-align: center; font-size: 40px; font-weight: 500; padding: 5px;">
+            Gallery
+        </h3>
+    </div><br>
+    <div class="container" data-aos="fade-up">
+        <div class="gallery" data-aos="fade-up">
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/new.jpg" alt="Image 1">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/new2.jpg" alt="Image 2">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages//new3.jpg" alt="Image 3">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/new4.jpg" alt="Image 1">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pexels-ollivves-1078983.jpg" alt="Image 2">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pexels-ollivves-1433052.jpg" alt="Image 3">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic23.jpg" alt="Image 1">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic10.jpg" alt="Image 2">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic11.jpg" alt="Image 3">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic12.jpg" alt="Image 1">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic13.jpg" alt="Image 2">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic14.jpg" alt="Image 3">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic15.jpg" alt="Image 1">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic16.jpg" alt="Image 2">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic17.jpg" alt="Image 3">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic18.jpg" alt="Image 1">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic19.jpg" alt="Image 2">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic20.jpg" alt="Image 3">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic21.jpg" alt="Image 3">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic22.jpg" alt="Image 3">
+            </div>
+        </div>
+    </div>
+    <!-- Gallery end -->
+
+    <!-- date/time & live location start -->
+    <div id="ticker">
+        <div id="ticker-content">
+            <span id="datetime"></span> - <span id="location"></span>
+        </div>
+    </div>
+
+
+    <script>
+
+        // Function to update date and time
+        function updateDateTime() {
+            const now = new Date();
+            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const timeOptions = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
+
+            const formattedDate = now.toLocaleDateString('en-US', dateOptions);
+            const formattedTime = now.toLocaleTimeString('en-US', timeOptions);
+
+            document.getElementById('datetime').textContent = `${formattedDate} ${formattedTime}`;
+        }
+
+        // Function to get geolocation
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                document.getElementById('location').textContent = 'Geolocation is not supported by this browser.';
+            }
+        }
+
+        // Function to display geolocation
+        function showPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            // Here you can use a reverse geocoding service to get the location name based on latitude and longitude
+            // For simplicity, let's just show the coordinates
+            document.getElementById('location').textContent = `Lat: ${latitude.toFixed(2)}, Long: ${longitude.toFixed(2)}`;
+        }
+
+        // Update date and time initially and every second
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+
+        // Get and display location
+        getLocation();
+    </script>
+    <!-- date/time & live location end -->
+
+    <!-- footer start  -->
+    <footer>
+        <section class="footers bg-dark pt-5 pb-5">
+            <div class="container pt-5">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4 footers-one">
+                        <div class="footers-logo">
+                            <img src="MiscellaneousImages/logo2.png" alt="Logo"
+                                style="width: 200px; height: 120px; margin-top: -50px;">
+                        </div>
+                        <div class="footers-info" style="padding-top: -5px;">
+                            <p
+                                style="font-size: 16px; font-family: serif;font-style: italic; font-weight: 300; color: #f0f0f0;">
+                                Address:
+                                SD-1 block A North Nazimabad, karachi <br> Phone: +021-4532601</p>
+                        </div>
+                        <hr style="border: 1px solid grey; width: 300px;">
+                        <div class="social-icons">
+                            <a target="_blank"
+                                href="https://www.facebook.com/people/Beauty-of-Beaches/61562275420284/?mibextid=ZbWKwL">
+                                <i class="fa-brands fa-facebook-f"></i></a>
+                            <a target="_blank"
+                                href="https://www.instagram.com/beauty.of.beach?utm_source=qr&igsh=enIyeGRzYndwbTQ1"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-2 footers-two">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="Index.html">Home</a></li>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="#beachnav">Explore Beaches</a></li>
+                            <li><a href="#gallery">Gallery</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-2 footers-three">
+                        <h5>Advise Us</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="Feedback form.html">Feedback</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+
+                        </ul>
+                    </div>
+                    <div style="padding: 5px; width: 250px;" class="col-xs-12 col-sm-6 col-md-2 footers-three">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-row justify-content-evenly">
+                                <div><img style="width: 100px; height: 100px;" src="MiscellaneousImages/footerpic1.jpeg"
+                                        alt=""></div>
+                                <div><img style="width: 100px; height: 100px;" src="MiscellaneousImages/footerpic2.jpeg"
+                                        alt=""></div>
+                            </div>
+                            <div class="d-flex flex-row justify-content-evenly">
+                                <div><img style="width: 100px; height: 100px;" src="MiscellaneousImages/footerpic3.jpeg"
+                                        alt=""></div>
+                                <div><img style="width: 100px; height: 100px;" src="MiscellaneousImages/footerpic4.jpeg"
+                                        alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="footerbutton">
+                        <button id="scrollToTopBtn">
+                            <i class="fa-solid fa-angle-up"></i>
+                        </button>
+                    </div>
+                    <script>
+
+                        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+                        var rootElement = document.documentElement;
+
+                        function scrollToTop() {
+                            // Scroll to top logic
+                            rootElement.scrollTo({
+                                top: 0,
+                                behavior: "smooth"
+                            });
+                        }
+
+                        scrollToTopBtn.addEventListener("click", scrollToTop);
+
+                        // Show button when user scrolls down
+                        window.onscroll = function () {
+                            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                                scrollToTopBtn.style.display = "block";
+                            } else {
+                                scrollToTopBtn.style.display = "none";
+                            }
+                        };
+                    </script>
+
+
+
+                </div><br>
+                <hr style="border: 1px solid grey;">
+                <p style="color: #f0f0f0; text-align: center; font-size: 14px;">Copyright @ 2024 | All rights reserved
+                    by
+                    E-Project batch 2402G2 group A</p>
+                <hr style="border: 1px solid grey;">
+            </div>
+        </section>
+    </footer>
+    <!-- footer end  -->
+
+</body>
+
+</html>

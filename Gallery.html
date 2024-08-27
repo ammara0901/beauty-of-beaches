@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beauty of Beaches</title>
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <!-- cards start -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="style.css">
+    <!-- cards end -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src="https://kit.fontawesome.com/d9d63ca6bf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-H1b4f1kUddM3+5HXtZv8Y7lTo7L7E5EuvrQc87BtdZ8Dw4soB0HPvB3GcGfLf6tsRucHt+M/XlmQ8g66e5sJAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- gallery -->
+    <!-- <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"> -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    /* Custom CSS for Navbar start */
+.nav-link {
+  margin-left: 10px;
+  color: aliceblue;
+  font-family: cursive;
+  
+}
+
+.nav-item .nav-link{
+  font-size: 18px;
+  font-weight: 550;
+  color: aliceblue;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  transition: 0.3s ease;}
+
+  .nav-item .nav-link:hover{
+    background: #ffa500;
+    color: white;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  height: 110px;
+
+}
+/* Custom CSS for Navbar end */
+/* CSS for Visitor Counter Start */
+
+.website-counter {
+  background-color: #ffa60033;
+  border: 3px solid #ffa500;
+  height: 40px;
+  width: 70px;
+  color: white;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+#reset {
+  margin-top: 10px;
+  background-color: #008cba;
+  cursor: pointer;
+  font-size: 18px;
+  height: 40px;
+  width: 70px;
+  color: white;
+  border-radius: 10px;
+}
+/* CSS for Visitor Counter End */
+
+/* Custom CSS for Carousel Start*/
+.carousel-item video {
+
+  object-fit: cover;
+}
+
+#vid {
+  width: 100%;
+  height: 730px;
+}
+
+h1 {
+  margin-bottom: 300px;
+  font-size: 60px;
+  color: white;
+  font-family: Georgia, serif;
+  font-weight: bolder;
+  text-shadow: black 100px solid;
+}
+
+#para1{
+/* color: rgba(0, 0, 0, 0.904); */
+font-family: cursive;
+color: #feb732;
+text-shadow:
+3px 3px 0 #000,
+-1px -1px 0 #000,  
+1px -1px 0 #000,
+-1px 1px 0 #000,
+1px 1px 0 #000;
+}
+#para1:hover{
+  color: #52f0d6;
+  text-shadow:
+  3px 3px 0 #000,
+-1px -1px 0 #000,  
+ 1px -1px 0 #000,
+ -1px 1px 0 #000,
+  1px 1px 0 #000;
+  }
+/* Custom CSS for Carousel End*/
+
+/* Custom CSS Date & Time Start*/
+.body1 {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#ticker {
+  
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #070707d2;
+  color: #fff;
+  padding: 10px 0;
+  overflow: hidden;
+  /* Ensure content doesn't overflow horizontally */
+}
+
+#ticker-content {
+  display: inline-block;
+  /* Allows content to flow horizontally */
+  white-space: nowrap;
+  /* Prevents content from wrapping */
+  animation: scrollText 30s linear infinite;
+  /* Adjust duration as needed */
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#ticker-content span {
+  margin: 0 20px;
+}
+
+#datetime {
+  font-weight: bold;
+}
+
+#zoneheading{
+  font-size: 30px;
+  font-style: italic;
+  font-family: cursive;
+}
+/* Custom CSS Date & Time End */
+
+/* Custom CSS Tap-to-top button Start */
+#scrollToTopBtn {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 48px; /* Adjust line height to match button height */
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  position: fixed;
+  bottom: 20px; /* Adjust bottom position */
+  right: 20px; /* Adjust right position */
+  display: none; /* Hide initially */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  #scrollToTopBtn {
+      font-size: 16px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      bottom: 10px; /* Adjust bottom position for smaller screens */
+      right: 10px; /* Adjust right position for smaller screens */
+  }
+  .collapse{
+    background-color: rgba(0, 0, 0, 0.6);
+   }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  #scrollToTopBtn {
+      font-size: 20px;
+      width: 70px;
+      height: 70px;
+      line-height: 70px;
+      bottom: 30px; /* Adjust bottom position for medium screens */
+      right: 30px; /* Adjust right position for medium screens */
+  }
+  .collapse{
+    background-color: rgba(0, 0, 0, 0.6);
+   }
+}
+
+@media screen and (min-width: 1025px) {
+  #scrollToTopBtn {
+      font-size: 22px;
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      bottom: 40px; /* Adjust bottom position for larger screens */
+      right: 40px; /* Adjust right position for larger screens */
+  }
+  .collapse{
+    background-color: none;
+   }
+}
+/* Custom CSS Tap-to-top button End */
+
+
+#tabs ul li {
+  font-style: italic;
+  color: #000;
+} 
+
+
+/* Custom CSS for Gallery Start */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  margin: 20px;
+  
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+/* Custom CSS for Gallery End */
+
+    /* Custom CSS for Footer Start */
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0, 0.5);
+  margin: 0;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s;
+
+}
+
+.social-icons a .fa-brands {
+  font-size: 40px;
+  line-height: 50px;
+  position: relative;
+  z-index: 10;
+  transition: color 0.5s;
+}
+
+.social-icons a::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: -90px;
+  left: 0;
+  background: linear-gradient(-45deg, #ed1c94, #ffec17);
+  position: absolute;
+  transition: 0.5s;
+}
+
+.social-icons a:hover::after {
+  top: 0;
+}
+
+.social-icons a:hover .fa-brands {
+  color: #f0f0f0;
+}
+
+.social-icons a:hover {
+  transform: translateY(-10px);
+}
+
+h5{
+  color: #f0f0f0;
+}
+
+.list-unstyled li a{
+  color: gray;
+  font-size: 16px;
+}
+
+.list-unstyled li a:hover{
+  color: #ffa500;
+}
+
+/* Custom CSS for Footer End */
+
+  </style>
+
+</head>
+
+<body>
+
+    <!-- navbar start -->
+    <nav class="navbar navbar-expand-lg bg-*">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Index.html"><img class="logo" src="MiscellaneousImages/logo2.png" alt="logo" width="150px"
+                    height="100px"></a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-curr ent="page" href="Index.html"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="aboutus.html"><b>About Us</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ExploreBeaches.html"><b>Explore Beaches</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Gallery.html"><b><span style="color: #ffa500;">Gallery</span></b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><b>Contact Us</b></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            AOS.init();
+        </script>
+        <!-- visitor counter start in navbar -->
+        <div class="d-flex flex-row justify-content-around" style="width: 200px; margin-right: 50px;">
+            <div class="website-counter d-flex flex-column align-items-center justify-content-center"></div>
+            <button id="reset">Reset</button>
+        </div>
+        <script>
+            var counterContainer = document.querySelector(".website-counter");
+            var resetButton = document.querySelector("#reset");
+            var visitCount = localStorage.getItem("page_view");
+            if (visitCount) {
+                visitCount = Number(visitCount) + 1;
+                localStorage.setItem("page_view", visitCount);
+            }
+            else {
+                visitCount = 1;
+                localStorage.setItem("page_view", 1);
+            }
+            counterContainer.innerHTML = visitCount;
+            resetButton.addEventListener("click", () => {
+                visitCount = 1;
+                localStorage.setItem("page_view", 1);
+                counterContainer.innerHTML = visitCount;
+            });
+        </script>
+        <!-- visitor counter end -->
+    </nav>
+    <!-- navbar end -->
+    <!-- carousel start -->
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <video id="vid" class="video-fluid" autoplay loop muted>
+                    <source src="Videos/vid4.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-item">
+                <video id="vid" class="video-fluid" autoplay loop muted>
+                    <source src="Videos/vid1.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="carousel-item">
+                <video id="vid" class="video-fluid" autoplay loop muted>
+                    <source src="Videos/vid5.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div id="para" class="carousel-caption font-weight-bold text-warning">
+                <h1 id="para1">BEAUTY OF BEACHES</h1>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- carousel end -->
+
+    <!-- Gallery start -->
+    <br>
+    <div id="gallery" class="container mt-5" data-aos="fade-up" 
+        style=" border-top: 2px solid #ffa500; border-bottom: 2px solid #ffa500;">
+        <h3 
+            style="color: rgb(0, 204, 255); font-style: italic; font-family: 'Times New Roman', Times, serif; text-align: center; font-size: 40px; font-weight: 500; padding: 5px;">
+            Gallery
+        </h3>
+    </div><br>
+    <div class="container" data-aos="fade-up">
+        <div class="gallery" data-aos="fade-up">
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/new.jpg" alt="Image 1">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/new2.jpg" alt="Image 2">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages//new3.jpg" alt="Image 3">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/new4.jpg" alt="Image 1">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pexels-ollivves-1078983.jpg" alt="Image 2">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pexels-ollivves-1433052.jpg" alt="Image 3">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic23.jpg" alt="Image 1">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic10.jpg" alt="Image 2">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic11.jpg" alt="Image 3">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic12.jpg" alt="Image 1">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic13.jpg" alt="Image 2">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic14.jpg" alt="Image 3">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic15.jpg" alt="Image 1">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic16.jpg" alt="Image 2">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic17.jpg" alt="Image 3">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic18.jpg" alt="Image 1">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic19.jpg" alt="Image 2">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic20.jpg" alt="Image 3">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic21.jpg" alt="Image 3">
+            </div>
+            <div style="height: 400px;" class="gallery-item">
+                <img src="GalleryImages/pic22.jpg" alt="Image 3">
+            </div>
+        </div>
+    </div>
+    <!-- Gallery end -->
+
+    <!-- date/time & live location start -->
+    <div id="ticker">
+        <div id="ticker-content">
+            <span id="datetime"></span> - <span id="location"></span>
+        </div>
+    </div>
+
+
+    <script>
+
+        // Function to update date and time
+        function updateDateTime() {
+            const now = new Date();
+            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const timeOptions = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
+
+            const formattedDate = now.toLocaleDateString('en-US', dateOptions);
+            const formattedTime = now.toLocaleTimeString('en-US', timeOptions);
+
+            document.getElementById('datetime').textContent = `${formattedDate} ${formattedTime}`;
+        }
+
+        // Function to get geolocation
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                document.getElementById('location').textContent = 'Geolocation is not supported by this browser.';
+            }
+        }
+
+        // Function to display geolocation
+        function showPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            // Here you can use a reverse geocoding service to get the location name based on latitude and longitude
+            // For simplicity, let's just show the coordinates
+            document.getElementById('location').textContent = `Lat: ${latitude.toFixed(2)}, Long: ${longitude.toFixed(2)}`;
+        }
+
+        // Update date and time initially and every second
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+
+        // Get and display location
+        getLocation();
+    </script>
+    <!-- date/time & live location end -->
+
+    <!-- footer start  -->
+    <footer>
+        <section class="footers bg-dark pt-5 pb-5">
+            <div class="container pt-5">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4 footers-one">
+                        <div class="footers-logo">
+                            <img src="MiscellaneousImages/logo2.png" alt="Logo"
+                                style="width: 200px; height: 120px; margin-top: -50px;">
+                        </div>
+                        <div class="footers-info" style="padding-top: -5px;">
+                            <p
+                                style="font-size: 16px; font-family: serif;font-style: italic; font-weight: 300; color: #f0f0f0;">
+                                Address:
+                                SD-1 block A North Nazimabad, karachi <br> Phone: +021-4532601</p>
+                        </div>
+                        <hr style="border: 1px solid grey; width: 300px;">
+                        <div class="social-icons">
+                            <a target="_blank"
+                                href="https://www.facebook.com/people/Beauty-of-Beaches/61562275420284/?mibextid=ZbWKwL">
+                                <i class="fa-brands fa-facebook-f"></i></a>
+                            <a target="_blank"
+                                href="https://www.instagram.com/beauty.of.beach?utm_source=qr&igsh=enIyeGRzYndwbTQ1"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-2 footers-two">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="Index.html">Home</a></li>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="ExploreBeaches.html">Explore Beaches</a></li>
+                            <li><a href="Gallery.html">Gallery</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-2 footers-three">
+                        <h5>Advise Us</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="Feedback form.html">Feedback</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+
+                        </ul>
+                    </div>
+                    <div style="padding: 5px; width: 250px;" class="col-xs-12 col-sm-6 col-md-2 footers-three">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-row justify-content-evenly">
+                                <div><img style="width: 100px; height: 100px;" src="MiscellaneousImages/footerpic1.jpeg" alt=""></div>
+                                <div><img style="width: 100px; height: 100px;" src="MiscellaneousImages/footerpic2.jpeg" alt=""></div>
+                            </div>
+                            <div class="d-flex flex-row justify-content-evenly">
+                                <div><img style="width: 100px; height: 100px;" src="MiscellaneousImages/footerpic3.jpeg" alt=""></div>
+                                <div><img style="width: 100px; height: 100px;" src="MiscellaneousImages/footerpic4.jpeg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="footerbutton">
+                        <button id="scrollToTopBtn">
+                            <i class="fa-solid fa-angle-up"></i>
+                        </button>
+                    </div>
+                    <script>
+
+                        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+                        var rootElement = document.documentElement;
+
+                        function scrollToTop() {
+                            // Scroll to top logic
+                            rootElement.scrollTo({
+                                top: 0,
+                                behavior: "smooth"
+                            });
+                        }
+
+                        scrollToTopBtn.addEventListener("click", scrollToTop);
+
+                        // Show button when user scrolls down
+                        window.onscroll = function () {
+                            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                                scrollToTopBtn.style.display = "block";
+                            } else {
+                                scrollToTopBtn.style.display = "none";
+                            }
+                        };
+                    </script>
+
+
+
+                </div><br>
+                <hr style="border: 1px solid grey;">
+                <p style="color: #f0f0f0; text-align: center; font-size: 14px;">Copyright @ 2024 | All rights reserved
+                    by
+                    E-Project batch 2402G2 group A</p>
+                <hr style="border: 1px solid grey;">
+            </div>
+        </section>
+    </footer>
+    <!-- footer end  -->
+
+</body>

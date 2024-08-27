@@ -1,0 +1,503 @@
+/* Custom CSS for Navbar start */
+.nav-link {
+  margin-left: 10px;
+  color: aliceblue;
+  font-family: cursive;
+  
+}
+
+.nav-item .nav-link{
+  font-size: 18px;
+  font-weight: 550;
+  color: aliceblue;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  transition: 0.3s ease;}
+
+  .nav-item .nav-link:hover{
+    background: #ffa500;
+    color: white;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.6);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  height: 110px;
+
+}
+/* Custom CSS for Navbar end */
+/* CSS for Visitor Counter Start */
+
+.website-counter {
+  background-color: #ffa60033;
+  border: 3px solid #ffa500;
+  height: 40px;
+  width: 70px;
+  color: white;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+#reset {
+  margin-top: 10px;
+  background-color: #008cba;
+  cursor: pointer;
+  font-size: 18px;
+  height: 40px;
+  width: 70px;
+  color: white;
+  border-radius: 10px;
+}
+/* CSS for Visitor Counter End */
+
+/* Custom CSS for Carousel Start*/
+.carousel-item video {
+
+  object-fit: cover;
+}
+
+#vid {
+  width: 100%;
+  height: 730px;
+}
+
+h1 {
+  margin-bottom: 300px;
+  font-size: 60px;
+  color: white;
+  font-family: Georgia, serif;
+  font-weight: bolder;
+  text-shadow: black 100px solid;
+}
+
+#para1{
+/* color: rgba(0, 0, 0, 0.904); */
+font-family: cursive;
+color: #feb732;
+text-shadow:
+3px 3px 0 #000,
+-1px -1px 0 #000,  
+1px -1px 0 #000,
+-1px 1px 0 #000,
+1px 1px 0 #000;
+}
+#para1:hover{
+  color: #52f0d6;
+  text-shadow:
+  3px 3px 0 #000,
+-1px -1px 0 #000,  
+ 1px -1px 0 #000,
+ -1px 1px 0 #000,
+  1px 1px 0 #000;
+  }
+/* Custom CSS for Carousel End*/
+
+/* Custom CSS for Buttons Start */
+.btn {
+  padding: 0.8em 1.8em;
+  border: 2px solid #0569e4;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: .3s;
+  z-index: 1;
+  font-family: inherit;
+  color: #0569e4;
+}
+
+.btn::before {
+  content: '';
+  width: 0;
+  height: 300%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  background:#5bc5ef;
+  transition: .5s ease;
+  display: block;
+  z-index: -1;
+  color: white;
+  
+}
+
+.btn:hover::before {
+  width: 105%;
+}
+
+a {
+  color: black;
+  font-size: 20px;
+}
+/* Custom CSS for Buttons End */
+
+/* Custom CSS for Section Counter Start */
+#boxsize{
+  height: 150px;
+  padding-top: 35px;
+}
+
+.column {
+  width: 30%;
+  padding: 1.5%;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 30%;
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+.card1 {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: rgb(181, 224, 243);
+  color: aliceblue;
+  border-radius: 5px;
+  border: 2px solid black;
+  text-shadow:
+      3px 3px 0 #000,
+    -1px -1px 0 #000,  
+     1px -1px 0 #000,
+     -1px 1px 0 #000,
+      1px 1px 0 #000;
+  
+}
+
+#cardpara{
+  -webkit-text-stroke: 0.1px black;
+   color: black;
+   font-weight: bolder;
+   font-size: 22px;
+   font-style: italic;
+  
+}
+
+#sectionbg #counterhead{
+  text-align:center;
+  font-size: 36px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+
+#counterbg{
+height: 250px;
+}
+/* Custom CSS for Section Counter End */
+
+/* Custom CSS for Cards Start*/
+.card {
+  width: 300px;
+  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  color: #f0f0f0;
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
+.card img {
+  position: absolute;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  transition: opacity 0.2s ease-out;
+}
+.card h2 {
+  position: absolute;
+  inset: auto auto 50px 30px;
+  margin: 0;
+  transition: inset 0.3s 0.1s ease-out;
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: bolder;
+  text-transform: uppercase;
+}
+.card p, .card a {
+  position: absolute;
+  opacity: 0;
+  max-width: 90%;
+  transition: opacity 0.3s ease-out;
+}
+.card p {
+  inset: auto auto 80px 30px;
+  font-size: 22px;
+  font-family: "Roboto Condensed", sans-serif;
+  
+}
+
+.card a {
+  inset: auto auto 40px 30px;
+  color: black;
+  text-decoration: none;
+  font-weight: bolder;
+  font-size: 22px;
+}
+.card:hover h2 {
+  inset: auto auto 300px 30px;
+  transition: inset 0.3s ease-out;
+}
+.card:hover p, .card:hover a {
+  opacity: 1;
+  transition: opacity 0.5s 0.1s ease-in;
+}
+.card:hover img {
+  transition: opacity 0.3s ease-in;
+  opacity: 0.4;
+}
+
+.material-symbols-outlined {
+  vertical-align: middle;
+}
+
+#headingcolor{
+  -webkit-text-stroke: 1px rgb(42, 247, 230);
+   color: white;
+   text-shadow:
+       3px 3px 0 #000,
+     -1px -1px 0 #000,  
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+       1px 1px 0 #000;
+}
+/* Custom CSS for Cards End*/
+
+
+/* Custom CSS Date & Time Start*/
+.body1 {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#ticker {
+  
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #070707d2;
+  color: #fff;
+  padding: 10px 0;
+  overflow: hidden;
+  /* Ensure content doesn't overflow horizontally */
+}
+
+#ticker-content {
+  display: inline-block;
+  /* Allows content to flow horizontally */
+  white-space: nowrap;
+  /* Prevents content from wrapping */
+  animation: scrollText 30s linear infinite;
+  /* Adjust duration as needed */
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#ticker-content span {
+  margin: 0 20px;
+}
+
+#datetime {
+  font-weight: bold;
+}
+
+#zoneheading{
+  font-size: 30px;
+  font-style: italic;
+  font-family: cursive;
+}
+/* Custom CSS Date & Time End */
+
+/* Custom CSS Tap-to-top button Start */
+#scrollToTopBtn {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 48px; /* Adjust line height to match button height */
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  position: fixed;
+  bottom: 20px; /* Adjust bottom position */
+  right: 20px; /* Adjust right position */
+  display: none; /* Hide initially */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  #scrollToTopBtn {
+      font-size: 16px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      bottom: 10px; /* Adjust bottom position for smaller screens */
+      right: 10px; /* Adjust right position for smaller screens */
+  }
+  .collapse{
+    background-color: rgba(0, 0, 0, 0.6);
+   }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  #scrollToTopBtn {
+      font-size: 20px;
+      width: 70px;
+      height: 70px;
+      line-height: 70px;
+      bottom: 30px; /* Adjust bottom position for medium screens */
+      right: 30px; /* Adjust right position for medium screens */
+  }
+  .collapse{
+    background-color: rgba(0, 0, 0, 0.6);
+   }
+}
+
+@media screen and (min-width: 1025px) {
+  #scrollToTopBtn {
+      font-size: 22px;
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      bottom: 40px; /* Adjust bottom position for larger screens */
+      right: 40px; /* Adjust right position for larger screens */
+  }
+  .collapse{
+    background-color: none;
+   }
+}
+/* Custom CSS Tap-to-top button End */
+
+
+#tabs ul li {
+  font-style: italic;
+  color: #000;
+} 
+
+
+/* Custom CSS for Gallery Start */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+  margin: 20px;
+  
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+/* Custom CSS for Gallery End */
+
+    /* Custom CSS for Footer Start */
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0, 0.5);
+  margin: 0;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s;
+
+}
+
+.social-icons a .fa-brands {
+  font-size: 40px;
+  line-height: 50px;
+  position: relative;
+  z-index: 10;
+  transition: color 0.5s;
+}
+
+.social-icons a::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: -90px;
+  left: 0;
+  background: linear-gradient(-45deg, #ed1c94, #ffec17);
+  position: absolute;
+  transition: 0.5s;
+}
+
+.social-icons a:hover::after {
+  top: 0;
+}
+
+.social-icons a:hover .fa-brands {
+  color: #f0f0f0;
+}
+
+.social-icons a:hover {
+  transform: translateY(-10px);
+}
+
+h5{
+  color: #f0f0f0;
+}
+
+.list-unstyled li a{
+  color: gray;
+  font-size: 16px;
+}
+
+.list-unstyled li a:hover{
+  color: #ffa500;
+}
+
+/* Custom CSS for Footer End */
+

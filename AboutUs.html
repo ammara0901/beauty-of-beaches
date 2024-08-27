@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.js"></script>
+    <script src="https://kit.fontawesome.com/d9d63ca6bf.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-H1b4f1kUddM3+5HXtZv8Y7lTo7L7E5EuvrQc87BtdZ8Dw4soB0HPvB3GcGfLf6tsRucHt+M/XlmQ8g66e5sJAw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'lobster', cursive;
+        }
+
+        body {
+            background-color: #f0ecec;
+        }
+
+        .heading {
+            text-align: center;
+            margin-top: 25px;
+        }
+
+        .heading h1 {
+            font-size: 70px;
+            color: #0b0471;
+            background-color: whitesmoke;
+            font-style: italic;
+            font-weight: 500;
+            margin-bottom: 10px;
+        }
+
+        .heading p {
+            font-size: 20px;
+            margin-bottom: 50px;
+            color: #242323;
+            font-family: serif;
+            text-align: justify;
+        }
+
+        .about-us {
+            display: flex;
+            flex-direction: column-reverse; /* Reverses column order on small screens */
+            align-items: center;
+            width: 90%;
+            margin: auto;
+        }
+
+        .content {
+            padding: 35px;
+            text-align: center;
+        }
+
+        .content h2 {
+            color: #0b3d89;
+            font-size: 45px;
+            font-weight: lighter;
+            margin: 15px 0px;
+        }
+
+        .content p {
+            color: #333131;
+            font-size: 20px;
+            line-height: 1.5;
+            margin: 15px 0px;
+            font-family: serif;
+        }
+
+         /* Custom CSS for Footer Start */
+
+.social-icons {
+  display: flex;
+}
+
+.social-icons a {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0, 0.5);
+  margin: 0;
+  border-radius: 50%;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.5s;
+
+}
+
+.social-icons a .fa-brands {
+  font-size: 40px;
+  line-height: 50px;
+  position: relative;
+  z-index: 10;
+  transition: color 0.5s;
+}
+
+.social-icons a::after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: -90px;
+  left: 0;
+  background: linear-gradient(-45deg, #ed1c94, #ffec17);
+  position: absolute;
+  transition: 0.5s;
+}
+
+.social-icons a:hover::after {
+  top: 0;
+}
+
+.social-icons a:hover .fa-brands {
+  color: #f0f0f0;
+}
+
+.social-icons a:hover {
+  transform: translateY(-10px);
+}
+
+h5{
+  color: #f0f0f0;
+}
+
+.list-unstyled li a{
+  color: gray;
+  font-size: 16px;
+}
+
+.list-unstyled li a:hover{
+  color: #ffa500;
+}
+
+/* Custom CSS for Footer End */
+
+/* Custom CSS Tap-to-top button Start */
+#scrollToTopBtn {
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  font-size: 10px;
+  line-height: 48px; /* Adjust line height to match button height */
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  position: fixed;
+  bottom: 20px; /* Adjust bottom position */
+  right: 20px; /* Adjust right position */
+  display: none; /* Hide initially */
+  z-index: 1000; /* Ensure it's above other elements */
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 600px) {
+  #scrollToTopBtn {
+      font-size: 16px;
+      width: 50px;
+      height: 50px;
+      line-height: 50px;
+      bottom: 10px; /* Adjust bottom position for smaller screens */
+      right: 10px; /* Adjust right position for smaller screens */
+  }
+  .collapse{
+    background-color: rgba(0, 0, 0, 0.6);
+   }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+  #scrollToTopBtn {
+      font-size: 20px;
+      width: 70px;
+      height: 70px;
+      line-height: 70px;
+      bottom: 30px; /* Adjust bottom position for medium screens */
+      right: 30px; /* Adjust right position for medium screens */
+  }
+  .collapse{
+    background-color: rgba(0, 0, 0, 0.6);
+   }
+}
+
+@media screen and (min-width: 1025px) {
+  #scrollToTopBtn {
+      font-size: 22px;
+      width: 80px;
+      height: 80px;
+      line-height: 80px;
+      bottom: 40px; /* Adjust bottom position for larger screens */
+      right: 40px; /* Adjust right position for larger screens */
+  }
+  .collapse{
+    background-color: none;
+   }
+}
+/* Custom CSS Tap-to-top button End */
+
+/* Custom CSS Date & Time Start*/
+.body1 {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+#ticker {
+  
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #070707d2;
+  color: #fff;
+  padding: 10px 0;
+  overflow: hidden;
+  /* Ensure content doesn't overflow horizontally */
+}
+
+#ticker-content {
+  display: inline-block;
+  /* Allows content to flow horizontally */
+  white-space: nowrap;
+  /* Prevents content from wrapping */
+  animation: scrollText 30s linear infinite;
+  /* Adjust duration as needed */
+}
+
+@keyframes scrollText {
+  0% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+#ticker-content span {
+  margin: 0 20px;
+}
+
+#datetime {
+  font-weight: bold;
+}
+
+#zoneheading{
+  font-size: 30px;
+  font-style: italic;
+  font-family: cursive;
+}
+/* Custom CSS Date & Time End */
+
+/* Custom CSS for Navbar start */
+.nav-link {
+  margin-left: 10px;
+  color: aliceblue;
+  
+}
+
+.nav-item .nav-link{
+  font-size: 18px;
+  font-weight: 550;
+  color: aliceblue;
+  letter-spacing: 1px;
+  border-radius: 3px;
+  transition: 0.3s ease;}
+
+  .nav-item .nav-link:hover{
+    background: #ffa500;
+    color: white;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.774);
+  width: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+  height: 110px;
+
+}
+/* Custom CSS for Navbar end */
+/* CSS for Visitor Counter Start */
+
+.website-counter {
+  background-color: #ffa60033;
+  border: 3px solid #ffa500;
+  height: 40px;
+  width: 70px;
+  color: white;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 25px;
+  margin-top: 10px;
+}
+
+#reset {
+  margin-top: 10px;
+  background-color: #008cba;
+  cursor: pointer;
+  font-size: 18px;
+  height: 40px;
+  width: 70px;
+  color: white;
+  border-radius: 10px;
+}
+/* CSS for Visitor Counter End */
+    </style>
+    <title>Document</title>
+</head>
+<body>
+     <!-- navbar start -->
+     <nav class="navbar navbar-expand-lg bg-*">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="Index.html"><img class="logo" src="MiscellaneousImages/logo2.png" alt="logo" width="150px"
+                    height="100px"></a>
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-curr ent="page" href="Index.html"><b>Home</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><b><span style="color: #ffa500;">About Us</span></b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ExploreBeaches.html"><b>Explore Beaches</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Gallery.html"><b>Gallery</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html"><b>Contact Us</b></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <script>
+            AOS.init();
+        </script>
+        <!-- visitor counter start in navbar -->
+        <div class="d-flex flex-row justify-content-around" style="width: 200px; margin-right: 50px;">
+            <div class="website-counter d-flex flex-column align-items-center justify-content-center"></div>
+            <button id="reset">Reset</button>
+        </div>
+        <script>
+            var counterContainer = document.querySelector(".website-counter");
+            var resetButton = document.querySelector("#reset");
+            var visitCount = localStorage.getItem("page_view");
+            if (visitCount) {
+                visitCount = Number(visitCount) + 1;
+                localStorage.setItem("page_view", visitCount);
+            }
+            else {
+                visitCount = 1;
+                localStorage.setItem("page_view", 1);
+            }
+            counterContainer.innerHTML = visitCount;
+            resetButton.addEventListener("click", () => {
+                visitCount = 1;
+                localStorage.setItem("page_view", 1);
+                counterContainer.innerHTML = visitCount;
+            });
+        </script>
+        <!-- visitor counter end -->
+    </nav>
+    <!-- navbar end -->
+
+    <div style="margin-top: 150px;" class="heading">
+        <h1>About <span style="color: #ffa500;">Us</span></h1>
+        <p class="container">To some people, the beach is simply a place for relaxation and fun, but millions of
+            people find it much more than that. It is a place of peace, tranquility, beauty, escape, and the opportunity
+            for us to find a connection with the sea and its ever-fascinating and changing environment. It's called
+            biophilia, a fancy word for our natural love of nature. When we're at the beach, the sound of waves, the
+            feel of sand between our toes, and the vast ocean views all tap into this deep connection, making us feel
+            calm and content. The yin and yang of hot and cold is also extremely refreshing.</p>
+    </div>
+
+    <section class="about-us container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-md-1">
+                <img class="img-fluid w-100 h-100" src="MiscellaneousImages/coast-8308438_1280.webp" alt="Coast Image">
+            </div>
+            <div class="content col-xl-6 col-lg-6 col-md-12 col-sm-12 order-md-2">
+                <h2>Beauty Of Beaches</h2>
+                <p>The beauty of beaches is a mesmerizing blend of nature's finest elements. The soft, powdery sands
+                    stretch
+                    out like a welcoming carpet, inviting bare feet to sink into their warmth. Waves dance rhythmically,
+                    their
+                    gentle caress echoing the heartbeat of the ocean. Seagulls glide effortlessly overhead, adding to
+                    the
+                    symphony of sounds that serenade the shore. Sunlight paints the waters in hues of turquoise and
+                    azure,
+                    while distant horizons blend seamlessly with the sky. Beaches are not just landscapes but
+                    sanctuaries
+                    where time slows down, allowing us to immerse ourselves in the tranquil harmony of sun, sea, and
+                    sand.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 order-xl-2 order-lg-2">
+                <img style="width: 100%; height: auto; padding: 40px; margin-top: 20px;" src="MiscellaneousImages/img2.jpg" alt="Team Member 2">
+            </div>
+            <div class="col-xl-6 col-lg-6 order-xl-1 order-lg-1">
+                <div style="padding-top: 40px;">
+                    <h1 style="font-family: 'lobster', cursive; color: #0b3d89; font-size: 45px; font-weight: 400;">
+                        Our Mission</h1>
+                    <p style="font-size: 22px; font-family: serif;">Our mission in the beauty of beaches is to preserve
+                        and celebrate these natural wonders as vital ecosystems and cultural treasures. Through education,
+                        advocacy, and community engagement, we promote sustainable practices and responsible stewardship. We
+                        strive to raise awareness about the importance of beach conservation, empower local communities, and
+                        support scientific research to ensure beaches remain pristine for future generations to enjoy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+
+
+        <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-md-1">
+                <img style="width: 100%; height: auto; padding: 40px; margin-top: 20px;" src="MiscellaneousImages/image1.jpg"
+                    alt="Team Member 2">
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-md-2">
+                <div style="padding-top: 40px;">
+                    <h1 style="font-family: 'lobster', cursive; color: #0b3d89; font-size: 45px; font-weight: 400;">
+                        Our Vision</h1>
+                    <p style="font-size: 22px; font-family: serif;">Our vision for the beauty of beaches is to see them
+                        as
+                        thriving ecosystems and cherished havens where biodiversity flourishes amidst sustainable human
+                        interactions. We envision beaches as places of natural wonder and cultural significance,
+                        inspiring
+                        awe and fostering stewardship among all who visit. Through innovative conservation practices,
+                        education, and global collaboration, we aim to ensure that beaches retain their scenic beauty
+                        and
+                        ecological integrity for generations to come, serving as resilient and accessible destinations
+                        that
+                        enrich lives and connect people with the wonders of the natural world.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<div class="container">
+    <h1 style="text-align: center; font-size: 90px; font-family: serif; font-style: italic; font-weight: 400; background-color: #f8f2f2; color: #0b0471; padding: 3px; margin-top: 50px;">
+        Our <span style="color: #ffa500;">Team</span>
+    </h1>
+   
+
+    <!-- Team Member 1 -->
+    <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-md-2">
+            <h1 style="font-family: serif; font-size: 50px; font-weight: 400;">HAMZA BIN HAFEEZ</h1>
+            <p style="font-size: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae illum nisi dolores facere tenetur, consectetur quas a eligendi rem reprehenderit repellat dolorum aliquam ipsa voluptatibus laborum cum inventore placeat? Quisquam!</p>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-md-1">
+            <img class="img-fluid w-50 h-100" style="border-radius: 50%; box-shadow: 0 0 10px 5px rgba(0, 0, 0, .3);" src="MiscellaneousImages/fb.image.jpg" alt="Team Member 1">
+        </div>
+    </div>
+
+    <!-- Team Member 2 -->
+    <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-md-2">
+            <img class="img-fluid w-50 h-100" style="border-radius: 50%; box-shadow: 0 0 10px 5px rgba(0, 0, 0, .3);" src="MiscellaneousImages/WhatsApp Image 2024-07-06 at 11.57.15_03733477.jpg" alt="Team Member 2">
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-md-1">
+            <h1 style="font-family: serif; font-size: 50px; font-weight: 400;">MAVIA ABID</h1>
+            <p style="font-size: 20px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, eum qui quam asperiores voluptates delectus veritatis tempora velit cupiditate porro, fuga officiis harum et ab. In culpa ab unde nostrum.</p>
+        </div>
+    </div>
+
+    <!-- Team Member 3 -->
+    <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-md-2">
+            <h1 style="font-family: serif; font-size: 50px; font-weight: 400;">AMARA ANJUM</h1>
+            <p style="font-size: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae illum nisi dolores facere tenetur, consectetur quas a eligendi rem reprehenderit repellat dolorum aliquam ipsa voluptatibus laborum cum inventore placeat? Quisquam!</p>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-md-1">
+            <img class="img-fluid w-50 h-100" style="border-radius: 50%; box-shadow: 0 0 10px 5px rgba(0, 0, 0, .3);" src="MiscellaneousImages/image-3.png" alt="Team Member 3">
+        </div>
+    </div>
+
+    <!-- Team Member 4 -->
+    <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-md-2">
+            <img class="img-fluid w-50 h-100" style="border-radius: 50%; box-shadow: 0 0 10px 5px rgba(0, 0, 0, .3);" src="MiscellaneousImages/image-3.png" alt="Team Member 4">
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-md-1">
+            <h1 style="font-family: serif; font-size: 50px; font-weight: 400;">USHNA BATOOL</h1>
+            <p style="font-size: 20px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores, eum qui quam asperiores voluptates delectus veritatis tempora velit cupiditate porro, fuga officiis harum et ab. In culpa ab unde nostrum.</p>
+        </div>
+    </div>
+
+    <!-- Team Member 5 -->
+    <div class="row">
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-md-2">
+            <h1 style="font-family: serif; font-size: 50px; font-weight: 400;">USAMA KASHIF</h1>
+            <p style="font-size: 20px;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae illum nisi dolores facere tenetur, consectetur quas a eligendi rem reprehenderit repellat dolorum aliquam ipsa voluptatibus laborum cum inventore placeat? Quisquam!</p>
+        </div>
+        <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 order-md-1">
+            <img class="img-fluid w-50 h-100" style="border-radius: 50%; box-shadow: 0 0 10px 5px rgba(0, 0, 0, .3);" src="MiscellaneousImages/images.png" alt="Team Member 5">
+        </div>
+    </div>
+</div>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <!-- date/time & live location start -->
+    <div id="ticker">
+        <div id="ticker-content">
+            <span id="datetime"></span> - <span id="location"></span>
+        </div>
+    </div>
+
+    <script>
+
+        // Function to update date and time
+        function updateDateTime() {
+            const now = new Date();
+            const dateOptions = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const timeOptions = { hour: 'numeric', minute: 'numeric', second: 'numeric' };
+
+            const formattedDate = now.toLocaleDateString('en-US', dateOptions);
+            const formattedTime = now.toLocaleTimeString('en-US', timeOptions);
+
+            document.getElementById('datetime').textContent = `${formattedDate} ${formattedTime}`;
+        }
+
+        // Function to get geolocation
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                document.getElementById('location').textContent = 'Geolocation is not supported by this browser.';
+            }
+        }
+
+        // Function to display geolocation
+        function showPosition(position) {
+            const latitude = position.coords.latitude;
+            const longitude = position.coords.longitude;
+
+            // Here you can use a reverse geocoding service to get the location name based on latitude and longitude
+            // For simplicity, let's just show the coordinates
+            document.getElementById('location').textContent = `Lat: ${latitude.toFixed(2)}, Long: ${longitude.toFixed(2)}`;
+        }
+
+        // Update date and time initially and every second
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+
+        // Get and display location
+        getLocation();
+    </script>
+    <!-- date/time & live location end -->
+
+    <!-- footer start  -->
+    <footer>
+        <section class="footers bg-dark pt-5 pb-5">
+            <div class="container pt-5">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4 footers-one">
+                        <div class="footers-logo">
+                            <img src="MiscellaneousImages/logo2.png" alt="Logo"
+                                style="width: 200px; height: 120px; margin-top: -50px;">
+                        </div>
+                        <div class="footers-info" style="padding-top: -5px;">
+                            <p
+                                style="font-size: 16px; font-family: serif;font-style: italic; font-weight: 300; color: #f0f0f0;">
+                                Address:
+                                SD-1 block A North Nazimabad, karachi <br> Phone: +021-4532601</p>
+                        </div>
+                        <hr style="border: 1px solid grey; width: 300px;">
+                        <div class="social-icons">
+                            <a target="_blank"
+                                href="https://www.facebook.com/people/Beauty-of-Beaches/61562275420284/?mibextid=ZbWKwL">
+                                <i class="fa-brands fa-facebook-f"></i></a>
+                            <a target="_blank"
+                                href="https://www.instagram.com/beauty.of.beach?utm_source=qr&igsh=enIyeGRzYndwbTQ1"><i
+                                    class="fa-brands fa-instagram"></i></a>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6 col-md-2 footers-two">
+                        <h5>Quick Links</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="Index.html">Home</a></li>
+                            <li><a href="aboutus.html">About Us</a></li>
+                            <li><a href="ExploreBeaches.html">Explore Beaches</a></li>
+                            <li><a href="Gallery.html">Gallery</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-2 footers-three">
+                        <h5>Advise Us</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="Feedback form.html">Feedback</a></li>
+                            <li><a href="contact.html">Contact Us</a></li>
+
+                        </ul>
+                    </div>
+                    <div style="padding: 5px; width: 250px;" class="col-xs-12 col-sm-6 col-md-2 footers-three">
+                        <div class="d-flex flex-column">
+                            <div class="d-flex flex-row justify-content-evenly">
+                                <div><img style="width: 100px; height: 100px;" src="MiscellaneousImages/footerpic1.jpeg" alt=""></div>
+                                <div><img style="width: 100px; height: 100px;" src="MiscellaneousImages/footerpic2.jpeg" alt=""></div>
+                            </div>
+                            <div class="d-flex flex-row justify-content-evenly">
+                                <div><img style="width: 100px; height: 100px;" src="MiscellaneousImages/footerpic3.jpeg" alt=""></div>
+                                <div><img style="width: 100px; height: 100px;" src="MiscellaneousImages/footerpic4.jpeg" alt=""></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="footerbutton">
+                        <button id="scrollToTopBtn">
+                            <i class="fa-solid fa-angle-up"></i>
+                        </button>
+                    </div>
+                    <script>
+
+                        var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+                        var rootElement = document.documentElement;
+
+                        function scrollToTop() {
+                            // Scroll to top logic
+                            rootElement.scrollTo({
+                                top: 0,
+                                behavior: "smooth"
+                            });
+                        }
+
+                        scrollToTopBtn.addEventListener("click", scrollToTop);
+
+                        // Show button when user scrolls down
+                        window.onscroll = function () {
+                            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                                scrollToTopBtn.style.display = "block";
+                            } else {
+                                scrollToTopBtn.style.display = "none";
+                            }
+                        };
+                    </script>
+
+
+
+                </div><br>
+                <hr style="border: 1px solid grey;">
+                <p style="color: #f0f0f0; text-align: center; font-size: 14px;">Copyright @ 2024 | All rights reserved
+                    by
+                    E-Project batch 2402G2 group A</p>
+                <hr style="border: 1px solid grey;">
+            </div>
+        </section>
+    </footer>
+    <!-- footer end  -->
+</body>
+
+</html>
